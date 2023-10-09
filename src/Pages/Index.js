@@ -83,63 +83,65 @@ const Index = () => {
 
   return (
     <>
+      <Topbar />
+      <Header />
       <section className="index">
-        <Topbar />
-        <Header />
-        <h1 className="text-center title">
-          Watch Your Favourite Movies & Shows for Free
-        </h1>
-        <form className="form" onSubmit={handleFormSubmit}>
-          <input
-            type="text"
-            className="searchbar"
-            placeholder="Search Movies & Shows"
-            value={searchMovies}
-            onChange={(e) => setSearchMovies(e.target.value)}
-          />
-        </form>
-        <div className="searched">
-          <span>
-            {loading ? (
-              <p className="text-center py-5">Loading...</p>
-            ) : (
-              <ul>
-                {movies
-                  .filter((movie) => movie.poster_path !== null)
-                  .sort((a, b) => b.popularity - a.popularity)
-                  .map((movie) => (
-                    <span
-                      className="showcase d-flex"
-                      key={movie.id}
-                      onClick={() => watchMovies(movie)}
-                    >
-                      <div className="ps-3">
-                        {movie.poster_path && (
-                          <img
-                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                            alt=""
-                            width="50px"
-                          />
-                        )}
-                      </div>
-                      <div className="ps-3">
-                        <span>
-                          {movie.original_title || movie.original_name}
-                        </span>
-                        <div className="sub-items">
-                          <span className="sub-text">
-                            {movie.original_language}
-                          </span>
-                          <span className="sub-text ms-2">
-                            Date: {movie.release_date || movie.first_air_date}
-                          </span>
+        <div className="index-sec">
+          <h1 className="text-center title py-3">
+            Watch Your Favourite Movies & Shows for Free
+          </h1>
+          <form className="form" onSubmit={handleFormSubmit}>
+            <input
+              type="text"
+              className="searchbar"
+              placeholder="Search Movies & Shows"
+              value={searchMovies}
+              onChange={(e) => setSearchMovies(e.target.value)}
+            />
+          </form>
+          <div className="searched">
+            <span>
+              {loading ? (
+                <p className="text-center py-5">Loading...</p>
+              ) : (
+                <ul>
+                  {movies
+                    .filter((movie) => movie.poster_path !== null)
+                    .sort((a, b) => b.popularity - a.popularity)
+                    .map((movie) => (
+                      <span
+                        className="showcase d-flex"
+                        key={movie.id}
+                        onClick={() => watchMovies(movie)}
+                      >
+                        <div className="ps-3">
+                          {movie.poster_path && (
+                            <img
+                              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                              alt=""
+                              width="50px"
+                            />
+                          )}
                         </div>
-                      </div>
-                    </span>
-                  ))}
-              </ul>
-            )}
-          </span>
+                        <div className="ps-3 ">
+                          <span className="title-name">
+                            {movie.original_title || movie.original_name}
+                          </span>
+                          <div className="sub-items ">
+                            <span className="sub-text title-name">
+                              {movie.original_language}
+                            </span>
+                            <span className="sub-text ms-2 title-name">
+                              Date: {movie.release_date || movie.first_air_date}
+                            </span>
+                          </div>
+                        </div>
+                      </span>
+                    ))}
+                </ul>
+              )}
+            </span>
+          </div>
         </div>
       </section>
     </>

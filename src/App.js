@@ -5,6 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { CurrentPageProvider } from "./context/currentPage";
 
 function App() {
+  const hello = () => {
+    debugger;
+  };
+  hello();
   return (
     <>
       <CurrentPageProvider>

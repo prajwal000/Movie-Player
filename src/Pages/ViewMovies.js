@@ -10,15 +10,15 @@ const ViewMovies = () => {
 
   // Construct the URL with the extracted id
   const url = `https://vidsrc.to/embed/movie/${id}`;
+  const time = date.slice(0, 4);
 
   return (
     <>
       <Topbar />
       <NavBar />
       <section className="container">
-        <h4 className="py-5 text-center">{title}</h4>
-        <div className="row">
-          <div className="col-lg-8">
+        <div className="row pt-3 d-flex align-items-center">
+          <div className="col-lg-9">
             <div>
               <iframe
                 className="vid-player"
@@ -30,30 +30,23 @@ const ViewMovies = () => {
               ></iframe>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-lg-3">
             <div className="text-center">
               <img
                 src={`https://image.tmdb.org/t/p/w500${image}`}
                 alt="Movie Poster"
-                width="330px"
+                width="300px"
+                className="poster"
               />
             </div>
           </div>
-        </div>
-        <div className="row mt-5 d-flex align-items-center">
-          <div className="col-lg-2">
-            <img
-              src={`https://image.tmdb.org/t/p/w500${image}`}
-              alt="Movie Poster"
-              width="200px"
-            />
-          </div>
-          <div className="col-lg-6 d-flex flex-column gap-3 my-2 ">
-            <div>Name : {title}</div>
-            <div>Language : {lang}</div>
-            <div>Release Date: {date}</div>
-            <div>Type : {type}</div>
-            <div>Description :{desc}</div>
+
+          <div className="col-lg-5">
+            <h5 className="py-3">
+              {title} ({time})
+            </h5>
+            <span className="sm-text">Type: {type}</span>
+            <div>Description: {desc}</div>
           </div>
         </div>
       </section>
