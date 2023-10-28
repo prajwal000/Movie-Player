@@ -88,7 +88,9 @@ function NavBar() {
       <Navbar expand="lg" className=" py-4 nav-bar">
         <Container>
           <Navbar.Brand className="text-white">
-            <Link to="/">Brand</Link>
+            <Link to="/" className="hd-link">
+              Movie Mania
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll " />
           <Navbar.Collapse id="navbarScroll">

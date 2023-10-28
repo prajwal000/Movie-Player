@@ -7,7 +7,7 @@ function Header() {
     <>
       <Navbar expand="lg" className=" py-4 nav-bar">
         <Container>
-          <Navbar.Brand className="text-white">Brand</Navbar.Brand>
+          <Navbar.Brand className="text-white">Movie Mainia</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll " />
           <Navbar.Collapse id="navbarScroll">
             <div className="ms-auto">

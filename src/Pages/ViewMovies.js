@@ -45,7 +45,13 @@ const ViewMovies = () => {
             <h5 className="py-3">
               {title} ({time})
             </h5>
-            <span className="sm-text">Type: {type}</span>
+            {type ? (
+              <>
+                <span className="sm-text">Type: {type}</span>
+              </>
+            ) : (
+              <></>
+            )}
             <div>Description: {desc}</div>
           </div>
         </div>

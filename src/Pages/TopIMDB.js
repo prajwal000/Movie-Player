@@ -27,6 +27,7 @@ function TopIMDB() {
   };
 
   const handleSubmit = (movie) => {
+    console.log(movie);
     navigate("/view", {
       state: {
         id: movie.id,
@@ -88,7 +89,7 @@ function TopIMDB() {
                 <div className="mb-3">
                   <span className="me-5 movie-sub-text">
                     lang: {movie.original_language}
-                  </span>{" "}
+                  </span>
                   <span className="movie-sub-text ">
                     Date: {movie.release_date}
                     {movie.first_air_date}
