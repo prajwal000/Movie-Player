@@ -53,7 +53,6 @@ function TopIMDB() {
 
   return (
     <>
-      <Topbar />
       <NavBar />
       <section className="container">
         <h5 className="py-3">Top IMDB Rated Movies</h5>

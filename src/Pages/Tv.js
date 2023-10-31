@@ -13,7 +13,6 @@ const Tv = () => {
 
   return (
     <>
-      <Topbar />
       <NavBar />
       <section className="container">
         <h4 className="py-5 text-center">{title}</h4>

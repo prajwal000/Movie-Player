@@ -38,7 +38,6 @@ function Searched() {
 
   return (
     <>
-      <Topbar />
       <NavBar />
       <section className="container py-5">
         <h6 className="mb-5">Your search results</h6>

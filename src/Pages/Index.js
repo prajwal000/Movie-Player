@@ -67,6 +67,7 @@ const Index = () => {
       );
 
       setMovies(response.data.results || []);
+      console.log(response.data.results || []);
       setLoading(false);
       setFirstRun(false);
     } catch (error) {
@@ -83,11 +84,9 @@ const Index = () => {
 
   return (
     <>
-      <Topbar />
-      <Header />
       <section className="index">
         <div className="index-sec">
-          <h1 className="text-center title py-3">
+          <h1 className="text-center title">
             Watch Your Favourite Movies & Shows for Free
           </h1>
           <form className="form" onSubmit={handleFormSubmit}>
@@ -99,6 +98,10 @@ const Index = () => {
               onChange={(e) => setSearchMovies(e.target.value)}
             />
           </form>
+          <div className="btn-div">
+            <button className="banner-btn">Go To Home</button>
+          </div>
+
           <div className="searched">
             <span>
               {loading ? (

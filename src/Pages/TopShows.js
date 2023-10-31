@@ -52,7 +52,6 @@ function TopShows() {
 
   return (
     <>
-      <Topbar />
       <NavBar />
       <section className="container">
         <h5 className="py-3">Top IMDB Rated TV Series</h5>

@@ -29,7 +29,7 @@ a {
 }
 
 .searchbar {
-  width: 500px !important;
+  width: 100% !important;
   padding: 10px;
   border-radius: 10px;
   color: #040714;
@@ -44,6 +44,27 @@ a {
 .form {
   max-width: 500px;
   margin: auto;
+}
+.btn-div {
+  width: 500px;
+  margin: auto;
+}
+.index-sec {
+  padding-top: 200px;
+}
+.banner-btn {
+  width: 500px;
+  margin: 10px 0px;
+  color: #f1f1f1;
+  background-color: #0063e5;
+  border-radius: 10px;
+  border: none;
+  padding: 3px 0px;
+  transition: 0.5s;
+
+  &:hover {
+    background: #0483ee;
+  }
 }
 .searched {
   width: 500px;
@@ -165,15 +186,17 @@ a {
   body {
     font-size: 14px;
   }
-  .searchbar {
-    max-width: 100% !important;
+  .form {
+    width: 80%;
   }
-  .searched {
-    width: 100% !important;
-    height: 400px;
+  .btn-div {
+    width: 80% !important;
+  }
+  .banner-btn {
+    width: 100%;
   }
   .title {
-    font-size: 18px !important;
+    font-size: 17px !important;
   }
   .movie_title {
     text-align: center !important;
@@ -185,11 +208,8 @@ a {
     margin-left: 0px !important;
     margin-top: 20px;
     outline: none;
-    max-width: 100% !important;
+    max-width: 80% !important;
     padding: 5px 8px;
-  }
-  .form {
-    max-width: 100% !important;
   }
   .nav-button {
     background-color: #0483ee;
@@ -204,15 +224,16 @@ a {
       background: #0063e5;
     }
   }
+  .showcase {
+    width: 80%;
+    margin: auto;
+  }
   .nav-searched {
     max-width: 100% !important;
     margin: 0 !important;
     z-index: 1;
     right: 00px;
     height: 400px;
-  }
-  .searchbar {
-    width: 100% !important;
   }
 }
 ul {

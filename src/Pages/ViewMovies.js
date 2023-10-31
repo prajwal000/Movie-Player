@@ -14,7 +14,6 @@ const ViewMovies = () => {
 
   return (
     <>
-      <Topbar />
       <NavBar />
       <section className="container">
         <div className="row pt-3 d-flex align-items-center">
