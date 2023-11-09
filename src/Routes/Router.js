@@ -7,6 +7,7 @@ import ViewMovies from "../Pages/ViewMovies";
 import Tv from "../Pages/Tv";
 import TopIMDB from "../Pages/TopIMDB";
 import TopShows from "../Pages/TopShows";
+import Contact from "../Pages/Contact";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
           <Route path="/tv" Component={Tv} exact />
           <Route path="/top-rated" Component={TopIMDB} exact />
           <Route path="/top-shows" Component={TopShows} exact />
+          <Route path="/contact" Component={Contact} exact />
         </Routes>
       </BrowserRouter>
     </>

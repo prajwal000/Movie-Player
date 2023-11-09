@@ -113,7 +113,7 @@ function NavBar() {
                   </Link>
                 </Nav>
                 <Nav className="text-white ">
-                  <Link to="/top-rated" className="link pt-2">
+                  <Link to="/Contact" className="link pt-2">
                     CONTACT
                   </Link>
                 </Nav>
