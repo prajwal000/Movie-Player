@@ -17,6 +17,10 @@ const ViewMovies = () => {
       <NavBar />
       <section className="container">
         <div className="row pt-3 d-flex align-items-center">
+          <div className="py-4 text-center note">
+            Note : You can change the server from the player located at top left
+            of the player.
+          </div>
           <div className="col-lg-9">
             <div>
               <iframe
@@ -29,6 +33,7 @@ const ViewMovies = () => {
               ></iframe>
             </div>
           </div>
+
           <div className="col-lg-3">
             <div className="text-center">
               <img

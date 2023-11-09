@@ -187,14 +187,17 @@ a {
     font-size: 14px;
   }
   .form {
-    width: 80%;
+    width: 70% !important;
   }
   .btn-div {
-    width: 80% !important;
+    width: 70% !important;
   }
   .banner-btn {
+    margin-top: 10px !important;
     width: 100%;
+    margin: auto;
   }
+
   .title {
     font-size: 17px !important;
   }
@@ -263,6 +266,9 @@ ul {
 .vid-player {
   border: 2px solid #0063e5;
   border-radius: 15px;
+  background-image: url(/src/assets/bg.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .sm-text {
   text-transform: capitalize;
@@ -278,4 +284,12 @@ ul {
   &:hover {
     color: #0063e5;
   }
+}
+.season {
+  padding: 40px;
+  background: #517bae;
+  color: #ccc;
+}
+.note {
+  color: green;
 }

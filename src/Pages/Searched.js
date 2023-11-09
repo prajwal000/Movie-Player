@@ -56,7 +56,6 @@ function Searched() {
                     src={`https://image.tmdb.org/t/p/w500${data.poster_path}`}
                     alt=""
                     width="100%"
-                    height="300px"
                     className="movie-img"
                   />
                 </div>

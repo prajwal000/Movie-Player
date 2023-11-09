@@ -67,7 +67,7 @@ const Index = () => {
       );
 
       setMovies(response.data.results || []);
-      console.log(response.data.results || []);
+
       setLoading(false);
       setFirstRun(false);
     } catch (error) {
@@ -81,7 +81,9 @@ const Index = () => {
     e.preventDefault();
     navigate("/search", { state: { movies } });
   };
-
+  const home = () => {
+    navigate("/home");
+  };
   return (
     <>
       <section className="index">
@@ -99,7 +101,9 @@ const Index = () => {
             />
           </form>
           <div className="btn-div">
-            <button className="banner-btn">Go To Home</button>
+            <button className="banner-btn" onClick={home}>
+              Go To Home
+            </button>
           </div>
 
           <div className="searched">

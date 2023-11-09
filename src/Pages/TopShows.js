@@ -3,7 +3,6 @@ import axios from "axios";
 import NavBar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useCurrentPage } from "../context/currentPage";
-import Topbar from "../components/Topbar";
 
 function TopShows() {
   const [movies, setMovies] = useState([]);

@@ -11,6 +11,7 @@ function NavBar() {
   const [requestCount, setRequestCount] = useState(0);
   const navigate = useNavigate();
   const watchMovies = (movie) => {
+    setSearchMovies("");
     if (movie.original_title) {
       navigate("/view", {
         state: {
@@ -147,36 +148,38 @@ function NavBar() {
                 .filter((movie) => movie.poster_path !== null) // Filter out movies with null poster_path
                 .sort((a, b) => b.popularity - a.popularity) // Sort by popularity in descending order
                 .map((movie) => (
-                  <span
-                    className="showcase d-flex"
-                    key={movie.id}
-                    onClick={() => watchMovies(movie)}
-                  >
-                    <div className="ps-3">
-                      {movie.poster_path && ( // Check if poster_path is not null
-                        <img
-                          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                          alt=""
-                          width="30px"
-                        />
-                      )}
-                    </div>
-                    <div className="ps-3">
-                      <span>
-                        {movie.original_title}
-                        {movie.original_name}
-                      </span>
-                      <div className="sub-items">
-                        <span className="sub-text">
-                          {movie.original_language}
-                        </span>
-                        <span className="sub-text ms-2">
-                          Date: {movie.release_date}
-                          {movie.first_air_date}
-                        </span>
+                  <div>
+                    <span
+                      className="showcase d-flex"
+                      key={movie.id}
+                      onClick={() => watchMovies(movie)}
+                    >
+                      <div className="ps-3">
+                        {movie.poster_path && ( // Check if poster_path is not null
+                          <img
+                            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                            alt=""
+                            width="30px"
+                          />
+                        )}
                       </div>
-                    </div>
-                  </span>
+                      <div className="ps-3">
+                        <span>
+                          {movie.original_title}
+                          {movie.original_name}
+                        </span>
+                        <div className="sub-items">
+                          <span className="sub-text">
+                            {movie.original_language}
+                          </span>
+                          <span className="sub-text ms-2">
+                            Date: {movie.release_date}
+                            {movie.first_air_date}
+                          </span>
+                        </div>
+                      </div>
+                    </span>
+                  </div>
                 ))}
             </ul>
           )}
