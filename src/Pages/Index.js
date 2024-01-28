@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
-import Topbar from "../components/Topbar";
 
 const Index = () => {
   const [searchMovies, setSearchMovies] = useState("");
@@ -61,13 +59,11 @@ const Index = () => {
   const fetchData = async () => {
     try {
       setLoading(true);
-
       const response = await axios.get(
         `https://api.themoviedb.org/3/search/multi?api_key=3a180f67541b49966efaac81d4fd5ef6&query=${searchMovies}`
       );
 
       setMovies(response.data.results || []);
-
       setLoading(false);
       setFirstRun(false);
     } catch (error) {

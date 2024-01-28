@@ -49,6 +49,7 @@ const ViewMovies = () => {
             <h5 className="py-3">
               {title} ({time})
             </h5>
+            <div className="pb-2">Language: {lang}</div>
             {type ? (
               <>
                 <span className="sm-text">Type: {type}</span>

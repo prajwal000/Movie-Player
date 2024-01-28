@@ -164,15 +164,15 @@ function NavBar() {
                         )}
                       </div>
                       <div className="ps-3">
-                        <span>
+                        <span className="title-name">
                           {movie.original_title}
                           {movie.original_name}
                         </span>
                         <div className="sub-items">
-                          <span className="sub-text">
+                          <span className="sub-text title-name">
                             {movie.original_language}
                           </span>
-                          <span className="sub-text ms-2">
+                          <span className="sub-text ms-2 title-name">
                             Date: {movie.release_date}
                             {movie.first_air_date}
                           </span>
