@@ -7,6 +7,7 @@ import axios from "axios";
 const Tv = () => {
   // Extract the id and image from the location state
   const { id, image, title, desc, lang, type, date } = useLocation().state;
+  alert(id)
   // Construct the URL with the extracted id
   const url = `https://www.vidsrc.to/embed/tv/${id}`;
   //season fetching
