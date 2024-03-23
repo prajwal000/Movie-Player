@@ -163,6 +163,8 @@ a {
   padding: 5px 8px;
 }
 .nav-button {
+  
+  text-decoration: none;
   background-color: #0483ee;
   border: none;
   border-radius: 10px;
@@ -334,4 +336,14 @@ ul {
 }
 .row{
   padding-right: 0px !important;
+}
+.link-1{
+  border: 2px solid #0063e5;
+  padding: 30px;
+  text-align: center;
+}
+.movie-links{
+  
+  font-size: 22px;
+  
 }
