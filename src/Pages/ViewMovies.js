@@ -24,14 +24,19 @@ const ViewMovies = () => {
           </div>
           <div className="col-lg-9">
             <div>
-              <iframe
-                className="vid-player"
-                src={url}
-                title={`Movie ${id}`}
-                width="100%"
-                height="500px"
-                allowFullScreen
-              ></iframe>
+            <iframe
+            className="vid-player"
+            src={url2}
+            title={`Movie ${id}`}
+            width="100%"
+            height="500px"
+            allowFullScreen="true" 
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+            scrolling="no"
+            frameborder="0"
+          ></iframe>
+          
             </div>
           </div>
 
@@ -42,11 +47,7 @@ const ViewMovies = () => {
                 alt="Movie Poster"
                 width="300px"
                 className="poster"
-                allowFullScreen="true" 
-                webkitallowfullscreen="true"
-                 mozallowfullscreen="true"
-                 scrolling="no"
-                 frameborder="0"
+               
               />
             </div>
           </div>
