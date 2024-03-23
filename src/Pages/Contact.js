@@ -38,7 +38,7 @@ const Contact = () => {
               type="email"
               className="form-control"
               id="exampleFormControlInput1"
-              placeholder="Johndoe@gmail.com"
+              placeholder="Johndoe@example.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

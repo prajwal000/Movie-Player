@@ -117,6 +117,11 @@ function NavBar() {
                     CONTACT
                   </Link>
                 </Nav>
+                <Nav className="text-white ">
+                <Link to="/signin" className="link pt-2">
+                  Login
+                </Link>
+              </Nav>
               </Nav>
             </div>
             <div className="">

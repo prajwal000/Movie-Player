@@ -8,6 +8,9 @@ import Tv from "../Pages/Tv";
 import TopIMDB from "../Pages/TopIMDB";
 import TopShows from "../Pages/TopShows";
 import Contact from "../Pages/Contact";
+import Login from "../Pages/Login";
+import SignUp from "../Pages/SignUp";
+import AdminHome from "../Admin/pages/AdminHome"
 
 function Router() {
   return (
@@ -22,7 +25,15 @@ function Router() {
           <Route path="/top-rated" Component={TopIMDB} exact />
           <Route path="/top-shows" Component={TopShows} exact />
           <Route path="/contact" Component={Contact} exact />
+          <Route path="/signin" Component={Login} exact />
+          <Route path="/signup" Component={SignUp} exact />
+
+
+          //admin routinng
+          <Route path="/admin/home" Component={AdminHome} exact />
+
         </Routes>
+        
       </BrowserRouter>
     </>
   );
