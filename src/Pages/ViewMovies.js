@@ -42,6 +42,11 @@ const ViewMovies = () => {
                 alt="Movie Poster"
                 width="300px"
                 className="poster"
+                allowFullScreen="true" 
+                webkitallowfullscreen="true"
+                 mozallowfullscreen="true"
+                 scrolling="no"
+                 frameborder="0"
               />
             </div>
           </div>
