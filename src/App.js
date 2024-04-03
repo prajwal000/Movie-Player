@@ -10,7 +10,7 @@ import Topbar from './components/Topbar';
 
 
 function App() {
-  console.log(process.env.React_APP_API_KEY)
+ 
   return (
     <>
    
