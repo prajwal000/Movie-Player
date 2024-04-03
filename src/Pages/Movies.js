@@ -16,7 +16,7 @@ function Movies() {
   const fetchMovies = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=3a180f67541b49966efaac81d4fd5ef6&page=${currentPage}`
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.React_APP_API_KEY}&page=${currentPage}`
       );
 
       setMovies(response.data.results || []);

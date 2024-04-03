@@ -5,6 +5,8 @@ import LatestMovies from "../components/LatestMovies";
 import LatestTvshows from "../components/LatestTvshows";
 import { useLocation } from "react-router-dom";
 import LoginSuccess from '../Modals/LoginSuccess';
+import Note from '../components/Note';
+import Banner from '../components/Banner';
 
 
 function Home() {
@@ -23,9 +25,11 @@ function Home() {
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
+          <Banner/>
             <TrendingMovie />
             <LatestMovies />
             <LatestTvshows />
+            <Note/>
         </>
     );
 }

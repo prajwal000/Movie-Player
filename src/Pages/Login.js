@@ -32,7 +32,11 @@ const Login = () => {
     return (
         <>
             <NavBar />
-            
+            <img src="https://swipefile.com/wp-content/uploads/2022/05/cta-banner-offer-copy.png" 
+            alt="" 
+            width="100%" 
+            height="200px"/>
+           
             <section className='login my-5 p-4 '>
                 <h4 className='text-center'>Login</h4>
                 <LoginFail
@@ -44,7 +48,7 @@ const Login = () => {
               onHide={() => setFields(false)}
               />
                 <form onSubmit={signIn}>
-                    <div className="mb-3 px-5">
+                    <div className="mb-3 input">
                         <label htmlFor="emailInput" className="form-label">
                             Email:
                         </label>
@@ -57,7 +61,7 @@ const Login = () => {
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div className="mb-3 px-5">
+                    <div className="mb-3 input">
                         <label htmlFor="passwordInput" className="form-label">
                             Password:
                         </label>

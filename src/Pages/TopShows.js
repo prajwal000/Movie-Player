@@ -3,6 +3,7 @@ import axios from "axios";
 import NavBar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useCurrentPage } from "../context/currentPage";
+import Note from "../components/Note";
 
 function TopShows() {
   const [movies, setMovies] = useState([]);
@@ -16,7 +17,7 @@ function TopShows() {
   const fetchMovies = async () => {
     try {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/tv/top_rated?api_key=3a180f67541b49966efaac81d4fd5ef6&page=${currentPage}`
+        `https://api.themoviedb.org/3/tv/top_rated?api_key=${process.env.React_APP_API_KEY}&page=${currentPage}`
       );
 
       setMovies(response.data.results || []);
@@ -104,6 +105,7 @@ function TopShows() {
             Next
           </button>
         </div>
+        <Note/>
       </section>
     </>
   );

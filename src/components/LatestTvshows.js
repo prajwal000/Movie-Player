@@ -13,7 +13,7 @@ function LatestTvshows() {
       try {
         // Make the API request to fetch the latest movies
         const response = await axios.get(
-          "https://api.themoviedb.org/3/trending/tv/day?api_key=3a180f67541b49966efaac81d4fd5ef6"
+          `https://api.themoviedb.org/3/trending/tv/day?api_key=${process.env.React_APP_API_KEY}`
         );
 
         // Update the state with the movie data

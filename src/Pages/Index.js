@@ -60,7 +60,7 @@ const Index = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://api.themoviedb.org/3/search/multi?api_key=3a180f67541b49966efaac81d4fd5ef6&query=${searchMovies}`
+        `https://api.themoviedb.org/3/search/multi?api_key=${process.env.React_APP_API_KEY}&query=${searchMovies}`
       );
 
       setMovies(response.data.results || []);

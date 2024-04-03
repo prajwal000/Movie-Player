@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../assets/joe.png"
 
 function NavBar() {
   const [searchMovies, setSearchMovies] = useState("");
@@ -64,7 +65,7 @@ function NavBar() {
 
       // Make separate API calls for movies and TV shows
       const response = await axios.get(
-        `https://api.themoviedb.org/3/search/multi?api_key=3a180f67541b49966efaac81d4fd5ef6&query=${searchMovies}`
+        `https://api.themoviedb.org/3/search/multi?api_key=${process.env.React_APP_API_KEY}&query=${searchMovies}`
       );
 
       setMovies(response.data.results || []);
@@ -84,13 +85,14 @@ function NavBar() {
     e.preventDefault();
     navigate("/search", { state: { movies } });
   };
+  console.log(movies)
   return (
     <>
       <Navbar expand="lg" className=" py-4 nav-bar">
         <Container>
           <Navbar.Brand className="text-white">
             <Link to="/" className="hd-link">
-              Movie Mania
+            <img src={logo} alt="logo" width="120px"/>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll " />
@@ -112,22 +114,29 @@ function NavBar() {
                     TOP IMDB MOVIES
                   </Link>
                 </Nav>
-                <Nav className="text-white ">
+               {
+                /**
+                 * 
+                 *  <Nav className="text-white ">
                   <Link to="/Contact" className="link pt-2">
                     CONTACT
                   </Link>
                 </Nav>
+
                 <Nav className="text-white ">
                 <Link to="/signin" className="link pt-2">
                   Login
                 </Link>
               </Nav>
+                 */
+               }
+                
               </Nav>
             </div>
-            <div className="">
-              <Nav className=" my-lg-0" navbarScroll>
+           
+            
                 <Nav className="text-white ">
-                  <form className="form" onSubmit={handleFormSubmit}>
+                  <form className="" onSubmit={handleFormSubmit}>
                     <input
                       type="text"
                       className="nav-search"
@@ -138,8 +147,7 @@ function NavBar() {
                     <button className="nav-button">search</button>
                   </form>
                 </Nav>
-              </Nav>
-            </div>
+             
           </Navbar.Collapse>
         </Container>
       </Navbar>
@@ -150,7 +158,7 @@ function NavBar() {
           ) : (
             <ul>
               {movies
-                .filter((movie) => movie.poster_path !== null) // Filter out movies with null poster_path
+                .filter((movie) => movie.release_date != null && movie.poster_path !=null) // Filter out movies with null poster_path
                 .sort((a, b) => b.popularity - a.popularity) // Sort by popularity in descending order
                 .map((movie) => (
                   <div>

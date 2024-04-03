@@ -17,7 +17,7 @@ const Contact = () => {
       <section className="contact py-5 ">
         <h3 className="text-center py-3">Contact Us</h3>
         <form onSubmit={onSubmit}>
-          <div className="mb-3 px-5">
+          <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
               Name :
             </label>
@@ -30,7 +30,7 @@ const Contact = () => {
               onChange={(e) => setName(e.target.value)}
             />
           </div>
-          <div className="mb-3 px-5">
+          <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
               Email :
             </label>
@@ -43,7 +43,7 @@ const Contact = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-          <div className="mb-3 px-5">
+          <div className="mb-3">
             <label htmlFor="exampleFormControlTextarea1" className="form-label">
               Message:
             </label>
@@ -59,7 +59,7 @@ const Contact = () => {
           </div>
 
           <>
-            <button className="mx-5 nav-button">Submit</button>
+            <button className=" nav-button">Submit</button>
           </>
         </form>
       </section>

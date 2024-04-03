@@ -1,19 +1,19 @@
-import React, { useEffect } from 'react';
+// App.js
+import React from 'react';
 import "./styles/App.css";
 import Router from "./Routes/Router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { CurrentPageProvider } from "./context/currentPage";
-import UserInfo from "./users/userInfo"
+import Topbar from './components/Topbar';
 
 
 function App() {
-  const { userId} = UserInfo();
-  console.log(userId)
-
+  console.log(process.env.React_APP_API_KEY)
   return (
     <>
+   
       <CurrentPageProvider>
         <Router />
       </CurrentPageProvider>
