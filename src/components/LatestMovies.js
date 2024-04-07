@@ -64,7 +64,7 @@ function LatestMovies() {
                 }}
                 className="movie-img"
               >
-                <div className="movie_title">{movie.original_title}</div>
+                <h6 className="movie_title">{movie.original_title}</h6>
               </span>
               <span
                 onClick={() => {

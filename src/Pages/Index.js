@@ -55,7 +55,7 @@ const Index = () => {
       clearTimeout(fetchTimer);
     };
   }, [searchMovies]);
-
+  
   const fetchData = async () => {
     try {
       setLoading(true);

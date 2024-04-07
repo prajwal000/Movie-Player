@@ -7,13 +7,13 @@ import Note from "../components/Note";
 
 const ViewMovies = () => {
   // Extract the id and image from the location state
-  const { id, image, title, desc, lang, type, date } = useLocation().state;
+  const { id, image, title, desc, lang,  date } = useLocation().state;
 const navigate=useNavigate()
   // Construct the URL with the extracted id
   const url = `https://vidsrc.to/embed/movie/${id}`;
   const url2=`https://vidsrc.xyz/embed/movie/${id}`
 
-
+ console.log(date)
  
   return (
     <>
@@ -36,7 +36,7 @@ const navigate=useNavigate()
    />
     </div>
      <div className="col-lg-4 py-4">
-     <h5 className="pb-2"> Name : {title} (date) </h5> 
+     <h5 className="pb-2"> Name : {title} ({date.slice(0,4)}) </h5> 
      <div className="pb-2"> language : {lang}</div>
      <div> Description : {desc}</div>
    <div className="text-success py-4">If movie is not present in  server try diffrent server.<br/>

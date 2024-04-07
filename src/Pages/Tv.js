@@ -50,7 +50,7 @@ const Tv = () => {
    />
     </div>
      <div className="col-lg-4 py-4">
-     <h5 className="pb-2"> Name : {title} (date) </h5> 
+     <h5 className="pb-2"> Name : {title} ({date.slice(0,4)}) </h5> 
      <div className="pb-2"> language : {lang}</div>
      <div> Description : {desc}</div>
    <div className="text-success py-4">If show is not present in  server try diffrent server.<br/>
