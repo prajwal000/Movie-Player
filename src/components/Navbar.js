@@ -84,6 +84,7 @@ function NavBar() {
   const handleFormSubmit = (e) => {
     e.preventDefault();
     navigate("/search", { state: { movies } });
+    setSearchMovies("")
   };
   console.log(movies)
   return (
@@ -114,15 +115,15 @@ function NavBar() {
                     TOP IMDB MOVIES
                   </Link>
                 </Nav>
-               {
-                /**
-                 * 
-                 *  <Nav className="text-white ">
+              <Nav className="text-white ">
                   <Link to="/Contact" className="link pt-2">
                     CONTACT
                   </Link>
                 </Nav>
-
+                {
+                  /**
+                   * 
+                   *  
                 <Nav className="text-white ">
                 <Link to="/signin" className="link pt-2">
                   Login

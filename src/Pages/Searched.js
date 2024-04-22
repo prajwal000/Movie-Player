@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../components/Navbar";
-import Topbar from "../components/Topbar";
+
 
 function Searched() {
   const location = useLocation();
@@ -42,11 +42,15 @@ function Searched() {
       <section className="container py-5">
         <h6 className="mb-5">Your search results</h6>
         <div className="row">
-          {movies
+        {
+          movies.length===0 ? <>jj</> :<></>
+        }
+          {
+            movies
             .filter((movie) => movie.poster_path !== null)
             .sort((a, b) => b.popularity - a.popularity)
             .map((data) => (
-              <div className="col-lg-2" key={data.id}>
+              <div className="col-lg-2 col-6 col-md-3" key={data.id}>
                 <div
                   onClick={() => {
                     handleSubmit(data);

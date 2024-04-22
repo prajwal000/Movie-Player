@@ -45,7 +45,7 @@ function LatestMovies() {
         <div className="row ">
           {/* Map through the movies and render each one */}
           {movies.map((movie) => (
-            <div className="col-lg-2 my-4 text-center " key={movie.id}>
+            <div className="col-lg-2 col-6 col-md-3 my-4 text-center " key={movie.id}>
               <span
                 onClick={() => {
                   handleSubmit(movie);

@@ -58,9 +58,10 @@ const Contact = () => {
             />
           </div>
 
-          <>
-            <button className=" nav-button">Submit</button>
-          </>
+          <div className=" pb-3">
+            <button className=" nav-button">Submit</button> 
+          </div>
+          <a href="https://www.facebook.com/" className="mx-3"><i class="bi bi-facebook fs-5"></i></a> <a href="https://www.twitter.com/" className=""><i class="bi bi-twitter fs-5"></i></a>
         </form>
       </section>
     </>

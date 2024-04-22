@@ -57,7 +57,7 @@ function TopShows() {
         <h5 className="py-3">Top IMDB Rated TV Series</h5>
         <div className="row">
           {movies.map((movie) => (
-            <div className="col-lg-2 my-4 text-center" key={movie.id}>
+            <div className="col-lg-2 col-6 col-md-3 my-4 text-center" key={movie.id}>
               <span
                 onClick={() => {
                   handleSubmit(movie);

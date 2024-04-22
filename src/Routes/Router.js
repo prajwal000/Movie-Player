@@ -29,7 +29,6 @@ function Router() {
           <Route path="/signup" Component={SignUp} exact />
 
 
-          //admin routinng
           <Route path="/admin/home" Component={AdminHome} exact />
 
         </Routes>

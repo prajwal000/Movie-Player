@@ -198,6 +198,10 @@ a {
   .form {
     width: 70% !important;
   }
+  .note{
+    font-size: 8px !important;
+    font-weight: 200;
+  }
   .btn-div {
     width: 70% !important;
   }
@@ -213,9 +217,7 @@ a {
   .movie_title {
     text-align: center !important;
   }
-  .mob-img {
-    width: 100% !important;
-  }
+
   .nav-search {
     
     margin-top: 20px;
@@ -226,7 +228,7 @@ a {
     padding: 5px 8px !important;
   }
 
-  .showcase {
+  .showcase {   
     width: 80%;
     margin: auto;
   }
@@ -263,7 +265,7 @@ ul {
   padding: 0px !important;
 }
 .mob-img {
-  width: 200px;
+  width: 100% !important;
 }
 .pagination {
   margin-bottom: 40px;
@@ -310,9 +312,7 @@ ul {
   background: #517bae;
   color: #ccc;
 }
-.note {
-  color: green;
-}
+
 .contact {
   margin: auto;
   width: 600px;

@@ -3,7 +3,7 @@ import axios from "axios";
 import NavBar from "../components/Navbar";
 import { useNavigate } from "react-router-dom";
 import { useCurrentPage } from "../context/currentPage";
-import Topbar from "../components/Topbar";
+
 import Note from "../components/Note";
 
 function TopIMDB() {
@@ -59,7 +59,7 @@ function TopIMDB() {
         <h5 className="py-3">Top IMDB Rated Movies</h5>
         <div className="row">
           {movies.map((movie) => (
-            <div className="col-lg-2 my-4 text-center" key={movie.id}>
+            <div className="col-lg-2 my-4 text-center col-6 " key={movie.id}>
               <span
                 onClick={() => {
                   handleSubmit(movie);
