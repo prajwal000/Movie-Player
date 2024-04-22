@@ -7,7 +7,7 @@ import  ReactGA from "react-ga4";
 ReactGA.initialize("G-4F9HXNWT02");
 
 ReactGA.send({
-    hittype:"pageview",
+    hitType:"pageview",
     page:window.location.pathname,
 
 });
