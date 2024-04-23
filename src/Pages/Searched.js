@@ -43,7 +43,7 @@ function Searched() {
         <h6 className="mb-5">Your search results</h6>
         <div className="row">
         {
-          movies.length===0 ? <>jj</> :<></>
+          movies.length===0 ? <>No Movies Found With {movies}</> :<></>
         }
           {
             movies

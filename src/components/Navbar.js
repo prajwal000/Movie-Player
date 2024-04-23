@@ -86,7 +86,7 @@ function NavBar() {
     navigate("/search", { state: { movies } });
     setSearchMovies("")
   };
-  console.log(movies)
+
   return (
     <>
       <Navbar expand="lg" className=" py-4 nav-bar">
@@ -153,16 +153,20 @@ function NavBar() {
         </Container>
       </Navbar>
       <div className="nav-searched ">
+
         <span>
+       
           {loading ? (
-            <p className="text-center py-5">Loading...</p>
+            <p className="text-center py-5">Loading...
+            
+            </p>
           ) : (
             <ul>
               {movies
                 .filter((movie) => movie.release_date != null && movie.poster_path !=null) // Filter out movies with null poster_path
                 .sort((a, b) => b.popularity - a.popularity) // Sort by popularity in descending order
-                .map((movie) => (
-                  <div>
+                .map((movie,key) => (
+                  <div key={key}>
                     <span
                       className="showcase d-flex"
                       key={movie.id}
