@@ -12,7 +12,7 @@ const navigate=useNavigate()
   // Construct the URL with the extracted id
   const url = `https://vidsrc.to/embed/movie/${id}`;
   const url2=`https://vidsrc.xyz/embed/movie/${id}`
-
+  window.scrollTo(0, 0);
  console.log(date)
  
   return (
@@ -20,12 +20,6 @@ const navigate=useNavigate()
       <NavBar />
      <section className="container">
 
-     <div>
-     <img src="https://swipefile.com/wp-content/uploads/2022/05/cta-banner-offer-copy.png" 
-     alt="" 
-     width="100%" 
-     height="200px"/>
-     </div>
      <div className="row py-4">
      <div className="col-lg-3 text-center">
      <img

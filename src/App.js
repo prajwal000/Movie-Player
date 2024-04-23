@@ -11,7 +11,9 @@ function App() {
  
   return (
     <>
-   
+    {process.env.NODE_ENV === "production" && (
+      <script src="https://eechicha.com/pfe/current/tag.min.js?z=7382998" data-cfasync="false" async></script>
+    )}
       <CurrentPageProvider>
         <Router />
       </CurrentPageProvider>

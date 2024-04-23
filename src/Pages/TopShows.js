@@ -27,6 +27,7 @@ function TopShows() {
   };
 
   const handleSubmit = (movie) => {
+    window.scrollTo(0, 0);
     navigate("/tv", {
       state: {
         id: movie.id,
@@ -38,15 +39,18 @@ function TopShows() {
         date: movie.first_air_date,
       },
     });
+   
   };
-
+ 
   const nextPage = () => {
     setCurrentPage(currentPage + 1);
+    window.scrollTo(0, 0);
   };
 
   const prevPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo(0, 0);
     }
   };
 
