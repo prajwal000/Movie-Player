@@ -26,7 +26,6 @@ function Home() {
             onHide={() => setModalShow(false)}
           />
           <Banner/>
-         
             <TrendingMovie />
             <LatestMovies />
             <LatestTvshows />

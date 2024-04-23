@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     {process.env.NODE_ENV === "production" && (
-      <script src="https://eechicha.com/pfe/current/tag.min.js?z=7382998" data-cfasync="false" async></script>
+      <script src="https://alwingulla.com/88/tag.min.js" data-zone="60427" async data-cfasync="false"></script>
     )}
       <CurrentPageProvider>
         <Router />
