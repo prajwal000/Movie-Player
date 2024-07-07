@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-ihave shahre the .env file so just you need to clone the project 
+i have shared the .env file so just you need to clone the project 
 ## Available Scripts
 
 In the project directory, you can run:
